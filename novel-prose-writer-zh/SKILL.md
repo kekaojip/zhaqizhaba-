@@ -1,6 +1,6 @@
 ---
 name: novel-prose-writer-zh
-description: Standalone Chinese fiction prose writer. Accepts loose natural-language prompts, scene notes, outlines, prior prose, or rewrite requests and outputs novel prose only. Focuses on natural modern Chinese, character consciousness, narrative distance, dialogue flow, sentence motion, and human-like prose choices. Does not require or depend on any external novel workflow.
+description: Standalone Chinese fiction prose writer. Accepts loose natural-language prompts, scene notes, outlines, prior prose, or rewrite requests and outputs novel prose only. Focuses on natural modern Chinese, character consciousness, narrative distance, dialogue flow, sentence motion, paragraph rhythm, and human-like prose choices. Does not require or depend on any external novel workflow.
 status: standalone
 language: zh-CN
 ---
@@ -136,8 +136,29 @@ Novel Prose Only
 4. 普通动作、判断、对白优先使用正常中文搭配。
 5. 题材只决定世界里的必要名词，不自动决定语体。
 6. 叙事距离随场景变化。
-7. 大量普通句负责运输，重点句少而有效。
-8. 不为了“像人”故意加错字、废话、口癖或随机小动作。
+7. 分段属于正文写作本身，必须像真人作者一样按阅读拍子自然组织，不机械碎段，也不堆成文字墙。
+8. 大量普通句负责运输，重点句少而有效。
+9. 不为了“像人”故意加错字、废话、口癖或随机小动作。
+
+## 段落职责
+
+分段由这个 Skill 自己负责，不把它当成排版后处理，也不要求用户另外指定。
+
+段落首先服务于读者的注意力、停顿和阅读节奏。
+
+写正文时：
+
+- 同一人物还在处理同一件事、注意力没有明显转移、动作或反应仍然连续时，优先让文字留在同一阅读拍里；
+- 说话人改变、注意对象改变、动作进入下一拍、时间地点跳转、念头或局部结果落下后转向别处时，可以自然换段；
+- 也允许作者式的直觉断点：如果这里停一下，下一句明显更顺、更舒服，可以换段；
+- 单句段可以用于真正需要的强调或停顿，但不能把一句一段当成默认格式；
+- 不设每段固定句数、固定字数或固定长度；
+- 不因为移动端阅读就强制把完整的阅读拍切碎；
+- 也不要为了避免碎段，把已经换了方向的多个阅读拍硬塞成大块。
+
+写完后快速扫一眼连续段落的整体形状：目标不是整齐，而是像真人正文一样有自然呼吸。若整页都是一两句的小条，或整页都是厚重的大块，才检查是否需要调整段落边界。
+
+具体执行见 `references/WRITE_CORE.md`；只有第一稿出现明显碎段、砖墙段或其他阅读摩擦时，才按需读取 `references/LOCAL_REPAIR.md` 做一次局部修正。
 
 ## Register Firewall
 
@@ -182,7 +203,8 @@ Novel Prose Only
 - 学叙事距离；
 - 学对白接法；
 - 学心理写到哪里停；
-- 学哪里故意写普通。
+- 学哪里故意写普通；
+- 学段落在哪里自然停、哪里继续黏住。
 
 不要复制：
 
